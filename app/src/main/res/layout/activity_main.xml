@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/png3"
     android:orientation="vertical"
 
     android:fitsSystemWindows="true"
@@ -15,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
-        android:background="#B84EED">
+        >
 
         <ImageView
             android:layout_width="50dp"
@@ -38,25 +39,32 @@
     </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:gravity="center"
-        android:layout_margin="2dp"
+        android:layout_margin="5dp"
         android:layout_gravity="center"
-        app:errorTextColor="@color/black"
+         app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="3dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/black"
 
-        android:layout_height="wrap_content">
+        android:hint="Search">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:id="@+id/search"
             android:focusable="true"
+
             android:textColor="@color/black"
+            android:layout_margin="5dp"
+
             android:focusableInTouchMode="true"
-            android:layout_margin="2dp"
+            android:textColorHint="@color/black"
             android:layout_gravity="center"
 
-            android:hint="Search" />
+             />
     </com.google.android.material.textfield.TextInputLayout>
     <View
         android:layout_width="match_parent"
@@ -69,6 +77,8 @@
         android:id="@+id/recycler"
         android:layout_height="0dp"
         android:layout_margin="2dp"
+         android:padding="10dp"
+        android:clipToPadding="false"
 
         android:layout_weight="1"
         tools:layout_editor_absoluteX="1dp"
